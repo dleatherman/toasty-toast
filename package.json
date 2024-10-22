@@ -1,0 +1,19 @@
+{
+  "name": "toasty-toast",
+  "version": "0.0.1",
+  "description": "A web component for toast alert messages",
+  "main": "toasty-toast.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dleatherman/toasty-toast.git"
+  },
+  "author": "Dan Leatherman <dleatherman@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dleatherman/toasty-toast/issues"
+  },
+  "homepage": "https://github.com/dleatherman/toasty-toast#readme"
+}

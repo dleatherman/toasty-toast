@@ -1,0 +1,92 @@
+toasty-toaster {
+  display: block;
+  position: fixed;
+}
+toasty-toaster[vertical="bottom"] {
+  bottom: 0;
+}
+toasty-toaster[vertical="top"] {
+  top: 0;
+}
+toasty-toaster[vertical="center"] {
+  top: 50%;
+  transform: translateY(-50%);
+}
+toasty-toaster[horizontal="left"] {
+  left: 0;
+}
+toasty-toaster[horizontal="right"] {
+  right: 0;
+}
+toasty-toaster[horizontal="center"] {
+  left: 0;
+  margin-inline: auto;
+  right: 0;
+  text-align: center;
+  width: auto;
+}
+toasty-toaster[horizontal="center"] toasty-toast {
+  margin-inline: auto;
+}
+
+toasty-toast[hidden] {
+  display: none;
+}
+toasty-toast {
+  --_spacing: 1rem;
+  --_radius: .3rem;
+  --_duration: .5s;
+  animation: slideUp var(--_duration) ease forwards 1;
+  background-color: rgb(var(--color-background, 255,255,255));
+  border: 1px solid rgb(var(--color-foreground, 0,0,0));
+  border-radius: var(--_radius);
+  color: rgb(var(--color-foreground, 0,0,0));
+  display: block;
+  margin: var(--_spacing);
+  max-width: calc(100vw - var(--_spacing) * 6);
+  padding: var(--_spacing) calc(var(--_spacing) * 2) var(--_spacing) var(--_spacing);
+  position: relative;
+  text-align: left;
+  width: fit-content;
+  will-change: transform;
+}
+toasty-toast * {
+  margin: 0;
+  padding: 0;
+}
+toasty-toast button {
+  background-color: transparent;
+  color: black;
+  padding: calc(var(--_spacing) / 4);
+  position: absolute;
+  right: calc(var(--_spacing) / 2);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+toasty-toast a::after {
+  content: '';
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    animation-duration: 0s !important;
+  }
+}
