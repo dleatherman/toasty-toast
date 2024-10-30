@@ -1,6 +1,6 @@
 {
   "name": "toasty-toast",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A web component for toast alert messages",
   "main": "toasty-toast.js",
   "scripts": {
