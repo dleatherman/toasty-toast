@@ -39,9 +39,7 @@ class ToastyToast extends HTMLElement {
 		}
 	}
 
-	handleTransition() {
-		console.log("animationend");
-	}
+	handleTransition() {}
 
 	showToast() {
 		this.removeAttribute("hidden");
@@ -50,6 +48,7 @@ class ToastyToast extends HTMLElement {
 	closeToast() {
 		this.hidden = true;
 		localStorage.setItem(this.storageKey, "true");
+		this.remove();
 	}
 }
 
